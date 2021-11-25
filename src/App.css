@@ -4,27 +4,51 @@
   width: 100%;
   height: 100%;
   margin:0;
+  background-image: url("./bg.jpg");
+  background-origin: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 0;
+  border-top: 15px;
+  border-style: solid;
+  border-color: #005863;
+  box-sizing: border-box;
+  padding-top: 5px;
+  animation: shimmer 50s infinite;
 }
-h1,h3,h5 {
+
+@keyframes shimmer {
+  0%  {
+     border-image: linear-gradient(45deg, #005863, #28AFB0 )10;
+  }
+ 25%  {
+   border-image: linear-gradient(45deg, #28AFB0, #64d1f7 )10;
+ }
+ 50%  {
+   border-image: linear-gradient(45deg, #64d1f7, #046d91 )10;
+ }
+ 75%  {
+   border-image: linear-gradient(45deg, #046d91, #005863 )10;
+ }
+ 100% {
+  border-image: linear-gradient(45deg, #005863, #28AFB0 )10;
+ }
+}
+h3,h5 {
   font-weight: normal;
 }
-header {
-  background-color: lightcoral;
-  width: 100%;
-  height: auto;
-  color: white;
-  padding: 8px;
+h3{
+  color: #003649;
+}
+h1{
+  margin: 0;
+  font-weight: bold;
   text-align: center;
   font-size: 60px;
-  display: flex;
-  align-items:center;
-  justify-content: center;
   font-family: usedFont;
-  box-sizing: border-box;
-}
-main {
-  height: calc(100vh - 100px);
-}
+  color: #19647e;
+  }
+
 
 form {
   display: grid;
@@ -65,8 +89,8 @@ form {
 #inputedTable, #cartable {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
-  width: 80%;
-  background-color: #f2f2f2;
+  width: 100%;
+  background-color: rgba(242, 242, 242, 0.82);
 }
 
 #inputedTable td, #inputedTable th, #cartable td, #cartable th {
@@ -74,15 +98,15 @@ form {
   padding: 8px;
 }
 
-#inputedTable tr:nth-child(even) ,#cartable tbody tr:nth-child(even){background-color: #f2f2f2;}
+#inputedTable tr:nth-child(even) ,#cartable tbody tr:nth-child(even){background-color: rgba(242, 242, 242, 0.82);}
 
-#inputedTable tr:hover ,#cartable tbody tr:hover{background-color: #ddd;}
+#inputedTable tr:hover ,#cartable tbody tr:hover{background-color: rgba(221, 221, 221, 0.82);}
 
 #inputedTable th,#cartable thead th{
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: center;
-  background-color: #04AA6D;
+  background-color: #6fcbcc;
   color: white;
   position: sticky;
   top: 0;
@@ -91,9 +115,11 @@ tfoot
 {
   position: sticky;
   bottom:0;
-  background-color: aquamarine;
+  background-color: #6fcbcc;
   border: 1px solid #ddd;
   padding: 8px;
+  border-collapse: collapse;
+  color: #ddd;
 }
 
 
@@ -127,7 +153,7 @@ input[type="submit"], #myBtn, #myBtn2
   margin: 10px;
   outline: none;
   padding: 8px 15px;
-  background-color: #32d9b6;
+  background-color: #00abc2;
   border: 1px solid rgba(0,0,0,0.15);
   border-radius: 4px;
   transition: all 0.3s ease-out;
@@ -141,17 +167,33 @@ input[type="submit"], #myBtn, #myBtn2
   justify-self:center;
   align-self: center;
 }
+#myBtn, #myBtn2
+{
+  width: auto;
+  padding: 5px 5px;
+  display: flex;
+  align-content : center;
+  justify-content: center;
+}
 input[type="submit"]:hover, #myBtn:hover, #myBtn2:hover
 {
   cursor: pointer;
-  background-color: #008569;
+  background-color: #23cbcd;
+}
+nav{
+  height: inherit;
+  width: auto;
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  flex-direction: column;
+}
+main {
+  height: calc(100vh - 110px);
+  display: grid;
+  grid-template-columns: 1fr auto;
 }
 
-
-footer{
-  height: auto;
-  bottom:0;
-}
 /* The Modal (background) */
 .modal {
   display: none;
@@ -171,9 +213,12 @@ footer{
 .modal-content {
   background-color: #fefefe;
   margin: auto;
-  padding: 20px;
+  padding: 10px;
   border: 1px solid #888;
   width: 40%;
+  border-style: outset;
+  border: 5px solid #008294;
+
 }
 .s
 {
@@ -195,7 +240,15 @@ footer{
 }
 
 section{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+section>div {
+  padding : 0;
+  margin : 0;
+  width : 80%;
+  margin-left: 20px;
+  margin-right: 20px;
 }
