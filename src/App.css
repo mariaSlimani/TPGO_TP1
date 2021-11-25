@@ -1,0 +1,201 @@
+@font-face { font-family: usedFont; src: url('./this1.ttf'); }
+.App {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  margin:0;
+}
+h1,h3,h5 {
+  font-weight: normal;
+}
+header {
+  background-color: lightcoral;
+  width: 100%;
+  height: auto;
+  color: white;
+  padding: 8px;
+  text-align: center;
+  font-size: 60px;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  font-family: usedFont;
+  box-sizing: border-box;
+}
+main {
+  height: calc(100vh - 100px);
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-gap: 0;
+  width: 100%;
+  height: 35vh;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.tableContainer1
+{
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 100%;
+  height: 57vh;
+  margin-bottom: 5px;
+  box-sizing: border-box;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+.tableContainer2
+{
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 100%;
+  height: 57vh;
+  margin-bottom: 5px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#inputedTable, #cartable {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+  background-color: #f2f2f2;
+}
+
+#inputedTable td, #inputedTable th, #cartable td, #cartable th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#inputedTable tr:nth-child(even) ,#cartable tbody tr:nth-child(even){background-color: #f2f2f2;}
+
+#inputedTable tr:hover ,#cartable tbody tr:hover{background-color: #ddd;}
+
+#inputedTable th,#cartable thead th{
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #04AA6D;
+  color: white;
+  position: sticky;
+  top: 0;
+}
+tfoot
+{
+  position: sticky;
+  bottom:0;
+  background-color: aquamarine;
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+
+input[type="number"]
+{
+  width: 30%;
+  background-position: 6px 5px;
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  align-self: center;
+  height: 25px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px gray;
+  margin-left: 10px;
+  padding-left: 10px;
+}
+
+input[type="number"]:focus {
+  outline: none;
+  background-color: rgba(50,164,217,.15);
+}
+form>h3 {
+  margin:0;
+  margin-bottom: 5px;
+}
+input[type="submit"], #myBtn, #myBtn2
+{
+  display: inline-block;
+  margin: 10px;
+  outline: none;
+  padding: 8px 15px;
+  background-color: #32d9b6;
+  border: 1px solid rgba(0,0,0,0.15);
+  border-radius: 4px;
+  transition: all 0.3s ease-out;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.5),
+    0 2px 2px rgba(0,0,0,0.3),
+    0 0 4px 1px rgba(0,0,0,0.2);
+  text-decoration: none;
+  color: white;
+  width: 20%;
+  justify-self:center;
+  align-self: center;
+}
+input[type="submit"]:hover, #myBtn:hover, #myBtn2:hover
+{
+  cursor: pointer;
+  background-color: #008569;
+}
+
+
+footer{
+  height: auto;
+  bottom:0;
+}
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%;
+}
+.s
+{
+  height:25vh;
+}
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+section{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+}
